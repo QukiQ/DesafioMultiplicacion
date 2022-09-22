@@ -16,11 +16,11 @@ let multiplicacion_numero = (x) =>{
 
 let validacion = () => {
     do {
-        let numero =  parseInt(prompt("Ingrese un numero entre 1 y 20."));
-        if(numero<1 || numero>20){
+        var numero =  parseInt(prompt("Ingrese un numero entre 1 y 20."));
+        if((numero<1) || (numero>20)){
             alert("Numero fuera de rango.");
         }
-    }while (numero<1 || numero>20);
+    }while ((numero<1) || (numero>20));
     return numero; 
 }
 
