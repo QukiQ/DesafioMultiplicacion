@@ -17,10 +17,15 @@ let multiplicacion_numero = (x) =>{
 let validacion = () => {
     do {
         let numero =  parseInt(prompt("Ingrese un numero entre 1 y 20."));
-        if(numero<1 || numero>20) alert("Numero fuera de rango.");
+        if(numero<1 || numero>20){
+            alert("Numero fuera de rango.");
+        }
     }while (numero<1 || numero>20);
     return numero; 
 }
 
-
- factorial_numero( validacion() );
+let operar = () =>{
+    var numero = parseInt(validacion()); 
+    multiplicacion_numero(numero);
+    factorial_numero(numero);
+}
