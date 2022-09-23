@@ -16,11 +16,17 @@ let multiplicacion_numero = (x) =>{
 
 let validacion = () => {
     do {
-        var numero =  parseInt(prompt("Ingrese un numero entre 1 y 20."));
-        if((numero<1) || (numero>20)){
-            alert("Numero fuera de rango.");
+        var numero =  prompt("Ingrese un numero entre 1 y 20.");
+        var rango = /^(0?[1-9])|([1][0-9])|20 $/;
+        
+        if(numero.match(rango)) {
+            alert('Numero ingresado correctamente.');
         }
-    }while ((numero<1) || (numero>20));
+        else {
+            alert('Numero invalido.');      
+        }
+
+    }while (!numero.match(rango));
     return numero; 
 }
 
